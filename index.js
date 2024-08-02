@@ -52,27 +52,28 @@ Write a program that asks a user for the amount of seconds needed until an alarm
 
 Result example: "Time for bed after 10 seconds".
 */
+/*
 const segundo = prompt("¿En cuanto tiempo quieres que suene la alarma?");
 //Lo convertimos en un int
 const primerNum = segundo * 1;
 const segundoNum = segundo * 1000;
 console.log(segundoNum);
 console.log(typeof segundoNum);
-
-/*
-//ciclo para imprimir los segundos
-for(let i = primerNum; i>=0; i--){
-    //agregamos un Timeout para cada segundo
-    setTimeout(()=>{
-        if (i>0){
-            console.log(`Quedan ${i -1} segundos`)
-        }else{
-            console.log("Se acabo el tiempo");
-        }
-    }, 1000);
-};
 */
-
+                            /*
+                            //ciclo para imprimir los segundos
+                            for(let i = primerNum; i>=0; i--){
+                                //agregamos un Timeout para cada segundo
+                                setTimeout(()=>{
+                                    if (i>0){
+                                        console.log(`Quedan ${i -1} segundos`)
+                                    }else{
+                                        console.log("Se acabo el tiempo");
+                                    }
+                                }, 1000);
+                            };
+                            */
+/*
 let arraySegundos = [];
 for( let i = 1; i <= primerNum; i++){
     arraySegundos.push(i);
@@ -98,14 +99,39 @@ function alarma(){
 setTimeout(delaySec, 1000);
 //setTimeout(delaySec, 1000);
 setTimeout(alarma, segundoNum);
-
-
-
+*/
 
 /*
 Palindrome
 Write a program that prompts for a word or sentence (it can be capitalized, have spaces and punctuation). Figure out if the sentence/word is a palindrome or not. Ignoring punctuation, spaces and capitalized letters.
 */
+
+let palindromo = prompt("Escribe un palindromo");
+let palindromoSinSignos = palindromo.replace(/[\W_-]/g, ""); //esta parte si la tuve que buscar en inernet :''v 
+let palindromoMinus = palindromoSinSignos.toLowerCase();
+
+console.log(palindromo);
+console.log(palindromoSinSignos);
+console.log(palindromoMinus);
+
+//volteamos el string
+let cadena1 = palindromoMinus.split("");
+console.log(cadena1);
+let cadenaInv = cadena1.reverse();
+console.log(cadenaInv);
+let cadenaFin = cadenaInv.join();
+console.log(cadenaFin);
+
+//comparamos los strings
+if(cadenaFin === palindromoMinus){
+    console.log("Segun Google, esto es un palindromo");
+
+}else{
+    console.log("No sabia que era un palindromo hasta que hice este ejercicio, pero puedo asegurar que esto no lo es :v ");
+}
+
+
+
 
 /*
 Factorial
