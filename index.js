@@ -25,7 +25,8 @@ console.log(`La informacion recibida es: ${infoPersonal}`);
 Highest number
 Write a program that asks for 10 numbers. Using logical operators and any other javascript functions/structures you've seen before, determine and output the highest of those numbers.
 */
-
+//falta que solo sean 10 numeros
+/*
 const numeros = prompt("Ingresa 10 numeros, separalos con un espacio.")
 
 console.log(numeros);
@@ -43,16 +44,63 @@ arrayN.forEach((numi) => {
     }
 });
 console.log("El numero mas grande es: "+ max);
-
+*/
 
 /*
 Alarm
 Write a program that asks a user for the amount of seconds needed until an alarm (message) is executed alongside a text to show once those seconds have passed in real time.
-*/
 
-/*
 Result example: "Time for bed after 10 seconds".
 */
+const segundo = prompt("¿En cuanto tiempo quieres que suene la alarma?");
+//Lo convertimos en un int
+const primerNum = segundo * 1;
+const segundoNum = segundo * 1000;
+console.log(segundoNum);
+console.log(typeof segundoNum);
+
+/*
+//ciclo para imprimir los segundos
+for(let i = primerNum; i>=0; i--){
+    //agregamos un Timeout para cada segundo
+    setTimeout(()=>{
+        if (i>0){
+            console.log(`Quedan ${i -1} segundos`)
+        }else{
+            console.log("Se acabo el tiempo");
+        }
+    }, 1000);
+};
+*/
+
+let arraySegundos = [];
+for( let i = 1; i <= primerNum; i++){
+    arraySegundos.push(i);
+};
+console.log(arraySegundos);
+
+//funcion de segundos
+function delaySec(){
+    arraySegundos.forEach((segundito)=>{
+        setTimeout(()=> {
+            console.log(segundito);
+        }, 1000);
+    });
+};
+
+
+function alarma(){
+    console.log(`Este mensaje aparecera despues de ${segundo} segundos`)
+};
+
+
+//segunditos();
+setTimeout(delaySec, 1000);
+//setTimeout(delaySec, 1000);
+setTimeout(alarma, segundoNum);
+
+
+
 
 /*
 Palindrome
