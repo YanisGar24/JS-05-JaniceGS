@@ -5,6 +5,7 @@ User profile
 Write a program that prompts a user for their data: username, age, and a list of their favorite movies. Store the information and then showcase it in the console. Take note that the output for the films should add a small message like: 'The film {film} is one of my favorites'.
 */
 
+/*
 console.log("User profile");
 let username = prompt("Cual es tu nombre?");
 let age = prompt("Cual es tu edad?");
@@ -18,13 +19,31 @@ infoPersonal.push(username, age, movies);
 console.log(`Bienvenidx ${username}! , tu edad es ${age}, tus peliculas ${movies} son muy buenas opciones, pero la que mas me gusta es ${movies[0]}`);
 console.log(`La informacion recibida es: ${infoPersonal}`);
 
-
-
+*/
 
 /*
 Highest number
 Write a program that asks for 10 numbers. Using logical operators and any other javascript functions/structures you've seen before, determine and output the highest of those numbers.
 */
+
+const numeros = prompt("Ingresa 10 numeros, separalos con un espacio.")
+
+console.log(numeros);
+console.log(typeof numeros) // es texto
+//console.log(numeros.split(' '));
+let arrayN = numeros.split(' ');
+console.log(arrayN);
+//console.log(numeros);
+let max = 0;
+
+//Por cada elemento en la lista
+arrayN.forEach((numi) => {
+    if(max < numi){ 
+        max = numi
+    }
+});
+console.log("El numero mas grande es: "+ max);
+
 
 /*
 Alarm
