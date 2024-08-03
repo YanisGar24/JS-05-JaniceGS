@@ -5,7 +5,7 @@ User profile
 Write a program that prompts a user for their data: username, age, and a list of their favorite movies. Store the information and then showcase it in the console. Take note that the output for the films should add a small message like: 'The film {film} is one of my favorites'.
 */
 
-/*
+
 console.log("User profile");
 let username = prompt("Cual es tu nombre?");
 let age = prompt("Cual es tu edad?");
@@ -19,14 +19,14 @@ infoPersonal.push(username, age, movies);
 console.log(`Bienvenidx ${username}! , tu edad es ${age}, tus peliculas ${movies} son muy buenas opciones, pero la que mas me gusta es ${movies[0]}`);
 console.log(`La informacion recibida es: ${infoPersonal}`);
 
-*/
+
 
 /*
 Highest number
 Write a program that asks for 10 numbers. Using logical operators and any other javascript functions/structures you've seen before, determine and output the highest of those numbers.
 */
 //falta que solo sean 10 numeros
-/*
+
 const numeros = prompt("Ingresa 10 numeros, separalos con un espacio.")
 
 console.log(numeros);
@@ -44,7 +44,7 @@ arrayN.forEach((numi) => {
     }
 });
 console.log("El numero mas grande es: "+ max);
-*/
+
 
 /*
 Alarm
@@ -52,14 +52,14 @@ Write a program that asks a user for the amount of seconds needed until an alarm
 
 Result example: "Time for bed after 10 seconds".
 */
-/*
+
 const segundo = prompt("¿En cuanto tiempo quieres que suene la alarma?");
 //Lo convertimos en un int
 const primerNum = segundo * 1;
 const segundoNum = segundo * 1000;
 console.log(segundoNum);
 console.log(typeof segundoNum);
-*/
+
                             /*
                             //ciclo para imprimir los segundos
                             for(let i = primerNum; i>=0; i--){
@@ -73,7 +73,7 @@ console.log(typeof segundoNum);
                                 }, 1000);
                             };
                             */
-/*
+
 let arraySegundos = [];
 for( let i = 1; i <= primerNum; i++){
     arraySegundos.push(i);
@@ -99,14 +99,14 @@ function alarma(){
 setTimeout(delaySec, 1000);
 //setTimeout(delaySec, 1000);
 setTimeout(alarma, segundoNum);
-*/
+
 
 /*
 Palindrome
 Write a program that prompts for a word or sentence (it can be capitalized, have spaces and punctuation). Figure out if the sentence/word is a palindrome or not. Ignoring punctuation, spaces and capitalized letters.
 */
 
-/*
+
 let palindromo = prompt("Escribe un palindromo");
 let palindromoSinSignos = palindromo.replace(/[\W_-]/g, ""); //esta parte si la tuve que buscar en inernet :''v 
 let palindromoMinus = palindromoSinSignos.toLowerCase();
@@ -130,14 +130,14 @@ if(cadenaFin === palindromoMinus){
 }else{
     console.log("No sabia que era un palindromo hasta que hice este ejercicio, pero puedo asegurar que esto no lo es :v ");
 };
-*/
+
 
 /*
 Factorial
 Write a program that prompts for an intenger number n. Where  1 <= n. Solve this using recursion.
 */
 //Recio :'V
-/*
+
 let numerito = prompt("Ingresa un num n para sacar un factorial");
 
 function numfactorial(n) {
@@ -155,7 +155,7 @@ let respuesta = numfactorial(numerito);
 // Ejemplo de uso
 console.log(`El factorial de ${numerito} es : ${respuesta}`); 
 
-*/
+
 
 /*
 Flat array
