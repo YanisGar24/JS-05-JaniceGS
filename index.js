@@ -137,7 +137,7 @@ Factorial
 Write a program that prompts for an intenger number n. Where  1 <= n. Solve this using recursion.
 */
 //Recio :'V
-
+/*
 let numerito = prompt("Ingresa un num n para sacar un factorial");
 
 function numfactorial(n) {
@@ -155,7 +155,7 @@ let respuesta = numfactorial(numerito);
 // Ejemplo de uso
 console.log(`El factorial de ${numerito} es : ${respuesta}`); 
 
-
+*/
 
 /*
 Flat array
@@ -163,3 +163,54 @@ Write a program that takes the following nested matrix and flattens it (makes it
 
 let multiDimension = [1, [2, 3, [4, 5, [6]]]];
 */
+
+let multiDimension = [1, [2, 3, [4, 5, [6]]]];
+//console.log(typeof multiDimension);
+
+//funcion para separar la matriz
+function matriz1D(matriz){
+    let result = []; //aqui guardamos los elementos ya separados
+     //los 3 puntos van a mostrar la lista de argumentos
+    let elementos = [...matriz]; 
+    
+    //mientras que el tamaño de la matriz sea mayor a 0
+    while (elementos.length > 0){
+        let elem = elementos.pop() //sacamos un elemneto
+        
+        //Array,isArray literealmenete nos dice si el elemento es un array :v
+        
+        //Si el array si es un array que recibe al elemento
+        if(Array.isArray(elem)){ //lo tuve que investigar en internet
+            //los 3 puntos van a mostrar la lista de argumentos
+            //En este caso, hacemos que la lista de argumentos se insetten en el array de elementos
+            
+            //Metemos ese elemnto a la lista almacenandolos
+            elementos.push(...elem); //tambien lo saqué de internet
+        } else {
+            //si no es asi, simplemente lo metemos en el la lista final
+            result.push(elem);
+        };
+    };
+    //Matriz final pero al reves
+    console.log(result);
+//Imprimimos la matriz ya plana, pero primero la voletamos 
+    let final = result.reverse();
+    console.log(final);
+
+};
+
+const arrayPlano = matriz1D(multiDimension);
+console.log(arrayPlano);
+
+/*
+console.log("separador");
+
+//ejemplo de los ... dentro del array
+let prueba = [1, 2, 4, 5, 6, 7, 9];
+//tipo objeto
+console.log(prueba); //output : [1, 2, 4, 5, 6, 7, 9]
+console.log(...prueba); //output: 1 2 4 5 6 7 9
+
+*/
+
+
