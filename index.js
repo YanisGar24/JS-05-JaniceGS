@@ -106,6 +106,7 @@ Palindrome
 Write a program that prompts for a word or sentence (it can be capitalized, have spaces and punctuation). Figure out if the sentence/word is a palindrome or not. Ignoring punctuation, spaces and capitalized letters.
 */
 
+/*
 let palindromo = prompt("Escribe un palindromo");
 let palindromoSinSignos = palindromo.replace(/[\W_-]/g, ""); //esta parte si la tuve que buscar en inernet :''v 
 let palindromoMinus = palindromoSinSignos.toLowerCase();
@@ -128,15 +129,33 @@ if(cadenaFin === palindromoMinus){
 
 }else{
     console.log("No sabia que era un palindromo hasta que hice este ejercicio, pero puedo asegurar que esto no lo es :v ");
-}
-
-
-
+};
+*/
 
 /*
 Factorial
 Write a program that prompts for an intenger number n. Where  1 <= n. Solve this using recursion.
 */
+//Recio :'V
+
+let numerito = prompt("Ingresa un num n para sacar un factorial");
+
+function numfactorial(n) {
+    // Caso done si n = 0 entonces va a regresar el mismo
+    if (n === 0) {
+        return 1;
+    }
+    // Caso recursivo
+    //regresa el num n + la misma funcion con la formula de la factorizacion
+    return n * numfactorial(n - 1);
+    //Basicamente es como si se escribiera n * (!(n-1));
+}
+let respuesta = numfactorial(numerito);
+
+// Ejemplo de uso
+console.log(`El factorial de ${numerito} es : ${respuesta}`); 
+
+
 
 /*
 Flat array
